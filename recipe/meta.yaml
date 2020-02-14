@@ -27,11 +27,15 @@ requirements:
     - requests
 
 test:
+  requires:
+    - pytest
   imports:
     - arvpyf
     - arvpyf.ar
     - arvpyf.cf
     - arvpyf.mgmt
+  commands:
+    - pytest --pyargs arvpyf.tests
  
 about:
   home: https://github.com/NSLS-II/arvpyf
