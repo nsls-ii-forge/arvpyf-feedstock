@@ -1,0 +1,41 @@
+{% set name = "arvpyf" %}
+{% set version = "0.4.2" %}
+{% set sha256 = "bfbad776d18ced9511ce6dbad7f41109bbf203c81962e08626e0b755afbd9248" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  build:
+    - python
+    - pip
+  run:
+    - python
+    - numpy
+    - pandas
+    - pytz
+    - requests
+
+test:
+  imports:
+    - arvpyf
+    - arvpyf.ar
+    - arvpyf.cf
+    - arvpyf.mgmt
+ 
+about:
+  home: https://github.com/NSLS-II/arvpyf
+  license: BSD (3-clause)
+  license_family: BSD
+  license_file: LICENSE
+  summary: Archiver Python Frontend
