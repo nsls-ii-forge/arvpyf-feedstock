@@ -32,7 +32,13 @@ test:
     - arvpyf.ar
     - arvpyf.cf
     - arvpyf.mgmt
- 
+  # TODO: uncomment this block once the test cassette is added to the distribution
+  # requires:
+  #   - pytest
+  #   - vcrpy
+  # commands:
+  #   - pytest --pyargs arvpyf.tests
+
 about:
   home: https://github.com/NSLS-II/arvpyf
   license: BSD (3-clause)
