@@ -27,16 +27,17 @@ requirements:
     - requests
 
 test:
-  requires:
-    - pytest
-    - vcrpy
   imports:
     - arvpyf
     - arvpyf.ar
     - arvpyf.cf
     - arvpyf.mgmt
-  commands:
-    - pytest --pyargs arvpyf.tests
+  # TODO: uncomment this block once the test cassette is added to the distribution
+  # requires:
+  #   - pytest
+  #   - vcrpy
+  # commands:
+  #   - pytest --pyargs arvpyf.tests
 
 about:
   home: https://github.com/NSLS-II/arvpyf
