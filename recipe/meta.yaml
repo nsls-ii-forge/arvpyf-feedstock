@@ -29,6 +29,7 @@ requirements:
 test:
   requires:
     - pytest
+    - vcrpy
   imports:
     - arvpyf
     - arvpyf.ar
@@ -36,7 +37,7 @@ test:
     - arvpyf.mgmt
   commands:
     - pytest --pyargs arvpyf.tests
- 
+
 about:
   home: https://github.com/NSLS-II/arvpyf
   license: BSD (3-clause)
