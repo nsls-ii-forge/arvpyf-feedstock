@@ -1,6 +1,6 @@
 {% set name = "arvpyf" %}
-{% set version = "0.4.2" %}
-{% set sha256 = "bfbad776d18ced9511ce6dbad7f41109bbf203c81962e08626e0b755afbd9248" %}
+{% set version = "0.4.3" %}
+{% set sha256 = "bab8e385c6b48c5839a30ea2e2f8fc3714e8a97db3c3e931f5bbc11ef65241dc" %}
 
 package:
   name: {{ name|lower }}
@@ -32,12 +32,11 @@ test:
     - arvpyf.ar
     - arvpyf.cf
     - arvpyf.mgmt
-  # TODO: uncomment this block once the test cassette is added to the distribution
-  # requires:
-  #   - pytest
-  #   - vcrpy
-  # commands:
-  #   - pytest --pyargs arvpyf.tests
+  requires:
+    - pytest
+    - vcrpy
+  commands:
+    - pytest --pyargs arvpyf.tests
 
 about:
   home: https://github.com/NSLS-II/arvpyf
