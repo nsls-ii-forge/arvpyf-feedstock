@@ -5,11 +5,9 @@ Home: https://github.com/NSLS-II/arvpyf
 
 Package license: BSD (3-clause)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/arvpyf-feedstock/blob/master/LICENSE.txt)
 
 Summary: Archiver Python Frontend
-
-
 
 Current build status
 ====================
